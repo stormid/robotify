@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Robotify</id>
+    <title>Robotify - robots.txt handler for ASP.NET (Webforms and MVC)</title>
+    <authors>Phil Oyston</authors>
+    <owners>Phil Oyston</owners>
+    <licenseUrl>https://raw.githubusercontent.com/stormid/robotify/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/stormid/robotify</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/stormid/robotify/master/docs/img/robots.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Configurable robots.txt handler supporting web.config based configuration.  Icon supplied by Freepik (http://www.flaticon.com/authors/freepik)</description>
+    <tags>robots seo webforms mvc</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Web" targetFramework="net40" />
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework="net40" />
+    </frameworkAssemblies>    
+  </metadata>
+  <files>
+    <file src="**/*" target="" />
+  </files>
+</package>

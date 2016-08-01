@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- prevent Visual Studio from complaining about missing schema information -->
+  <xs:schema>
+    <xs:element name="configuration">
+      <xs:complexType>
+        <xs:sequence>
+          <!-- just accept anything, we don't want a schema, really-->
+          <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+
+  <system.web>
+    <httpHandlers>
+      <remove verb="GET" path="robots.txt" xdt:transform="Remove" xdt:locator="Match(path)" />
+      <add verb="GET" path="robots.txt" type="Robotify.RobotsHttpHandler, Robotify" xdt:transform="Remove" xdt:locator="Match(path)" />
+    </httpHandlers>
+  </system.web>
+
+  <system.webServer>
+    <handlers>
+      <remove name="Robotify" xdt:transform="Remove" xdt:locator="Match(name)" />
+      <add verb="GET" name="Robotify" path="robots.txt" preCondition="integratedMode" type="Robotify.RobotsHttpHandler, Robotify" xdt:transform="Remove" xdt:locator="Match(name)" />
+    </handlers>
+  </system.webServer>
+
+</configuration>
