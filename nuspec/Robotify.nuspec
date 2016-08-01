@@ -7,7 +7,7 @@
     <owners>Phil Oyston</owners>
     <licenseUrl>https://raw.githubusercontent.com/stormid/robotify/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/stormid/robotify</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/stormid/robotify/master/docs/img/robots.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/stormid/robotify/master/docs/img/robot.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Configurable robots.txt handler supporting web.config based configuration.  Icon supplied by Freepik (http://www.flaticon.com/authors/freepik)</description>
     <tags>robots seo webforms mvc</tags>
