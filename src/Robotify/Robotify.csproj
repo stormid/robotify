@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\VersionAssemblyInfo.cs">
+      <Link>Properties\VersionAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="Config\ConfigurationManagerUtils.cs" />
     <Compile Include="Config\FromConfigSiteRobotSettings.cs" />
     <Compile Include="Config\ISiteRobotSettings.cs" />

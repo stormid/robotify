@@ -14,6 +14,7 @@
   
   <system.web xdt:Transform="InsertIfMissing">
     <httpHandlers xdt:Transform="InsertIfMissing">
+      <add verb="GET" path="robots.txt" xdt:transform="Remove" xdt:locator="Match(path)" />
       <remove verb="GET" path="robots.txt" xdt:transform="Replace" xdt:locator="Match(path)" />
       <add verb="GET" path="robots.txt" type="Robotify.RobotsHttpHandler, Robotify" xdt:transform="Replace" xdt:locator="Match(path)" />
     </httpHandlers>
@@ -23,6 +24,7 @@
     <validation validateIntegratedModeConfiguration="false" xdt:Transform="Replace" />
     
     <handlers xdt:Transform="InsertIfMissing">
+      <add verb="GET" path="robots.txt" xdt:transform="Remove" xdt:locator="Match(path)" />
       <remove name="Robotify" xdt:transform="Replace" xdt:locator="Match(name)" />
       <add verb="GET" name="Robotify" path="robots.txt" preCondition="integratedMode" type="Robotify.RobotsHttpHandler, Robotify" xdt:transform="Replace" xdt:locator="Match(name)" />
     </handlers>
