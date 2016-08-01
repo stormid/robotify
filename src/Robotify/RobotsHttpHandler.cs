@@ -17,6 +17,7 @@ namespace Robotify
 		{
             if (!SiteRobotSettings.IsConfigured)
             {
+                Trace.TraceInformation("[Robotify] Configuring from settings");
                 SiteRobotSettings.Set(new FromConfigSiteRobotSettings());
             }
 
@@ -50,7 +51,7 @@ namespace Robotify
             return File.Exists(context.Server.MapPath("~/robots.txt"));
         }
 
-        private bool RobotifyIsConfigured()
+        private static bool RobotifyIsConfigured()
         {
             return SiteRobotSettings.Current != null && SiteRobotSettings.Current.Enabled;
         }

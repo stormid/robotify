@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{6F05072C-0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotify", "src\Robotify\Robotify.csproj", "{997FD3D8-3D96-412F-B14D-953E8D00729F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{A95B3086-9D8B-4ABF-A439-74976ABB651A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +24,18 @@ Global
 		{997FD3D8-3D96-412F-B14D-953E8D00729F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{997FD3D8-3D96-412F-B14D-953E8D00729F}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
 		{997FD3D8-3D96-412F-B14D-953E8D00729F}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{A95B3086-9D8B-4ABF-A439-74976ABB651A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95B3086-9D8B-4ABF-A439-74976ABB651A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95B3086-9D8B-4ABF-A439-74976ABB651A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95B3086-9D8B-4ABF-A439-74976ABB651A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A95B3086-9D8B-4ABF-A439-74976ABB651A}.Staging|Any CPU.ActiveCfg = Release|Any CPU
+		{A95B3086-9D8B-4ABF-A439-74976ABB651A}.Staging|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{997FD3D8-3D96-412F-B14D-953E8D00729F} = {051C7B80-F5DA-482E-BBA4-3DDCBF0675A9}
+		{A95B3086-9D8B-4ABF-A439-74976ABB651A} = {6F05072C-035F-49DF-A1BB-C3ADD25E9618}
 	EndGlobalSection
 EndGlobal

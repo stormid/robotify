@@ -12,12 +12,6 @@
     </xs:element>
   </xs:schema>
   
-  <appSettings xdt:Transform="InsertIfMissing">
-    <add key="Robotify:Enabled" value="true" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
-    <add key="Robotify:DisallowPaths" value="*" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
-    <add key="Robotify:UserAgent" value="*" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />
-  </appSettings>
-
   <system.web xdt:Transform="InsertIfMissing">
     <httpHandlers xdt:Transform="InsertIfMissing">
       <remove verb="GET" path="robots.txt" xdt:transform="Replace" xdt:locator="Match(path)" />
@@ -25,7 +19,10 @@
     </httpHandlers>
   </system.web>
 
-  <system.webServer accessPolicy="Read, Write, Script, Execute" xdt:Transform="InsertIfMissing">
+  <system.webServer xdt:Transform="InsertIfMissing">
+    <validation validateIntegratedModeConfiguration="false" xdt:Transform="InsertIfMissing" />
+    <validation validateIntegratedModeConfiguration="false" xdt:Transform="Replace" />
+    
     <handlers xdt:Transform="InsertIfMissing">
       <remove name="Robotify" xdt:transform="Replace" xdt:locator="Match(name)" />
       <add verb="GET" name="Robotify" path="robots.txt" preCondition="integratedMode" type="Robotify.RobotsHttpHandler, Robotify" xdt:transform="Replace" xdt:locator="Match(name)" />
