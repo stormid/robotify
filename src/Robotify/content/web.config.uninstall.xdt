@@ -14,16 +14,19 @@
 
   <system.web>
     <httpHandlers>
-      <remove verb="GET" path="robots.txt" xdt:transform="Remove" xdt:locator="Match(path)" />
-      <add verb="GET" path="robots.txt" type="Robotify.RobotsHttpHandler, Robotify" xdt:transform="Remove" xdt:locator="Match(path)" />
+      <remove verb="GET" path="robots.txt" xdt:Transform="Remove" />
+      <add verb="GET" path="robots.txt" type="Robotify.RobotsHttpHandler, Robotify" xdt:Transform="Remove" />
     </httpHandlers>
+    <httpHandlers xdt:Locator="Condition(count(*) = 0)" xdt:Transform="Remove" />
   </system.web>
 
   <system.webServer>
     <handlers>
-      <remove name="Robotify" xdt:transform="Remove" xdt:locator="Match(name)" />
-      <add verb="GET" name="Robotify" path="robots.txt" preCondition="integratedMode" type="Robotify.RobotsHttpHandler, Robotify" xdt:transform="Remove" xdt:locator="Match(name)" />
+      <remove name="Robotify" xdt:Transform="Remove" />
+      <add verb="GET" name="Robotify" path="robots.txt" preCondition="integratedMode" type="Robotify.RobotsHttpHandler, Robotify" xdt:Transform="Remove" />
     </handlers>
+    <handlers xdt:Locator="Condition(count(*) = 0)" xdt:Transform="Remove" />
   </system.webServer>
+  <system.webServer xdt:Locator="Condition(count(*) = 0)" xdt:Transform="Remove" />
 
 </configuration>
