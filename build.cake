@@ -148,11 +148,11 @@ Task("Upload-AppVeyor-Artifacts")
     .Does(() =>
 {
 
-    var artifact = MakeAbsolute(File(artifacts.ToString() +"/packages/Robotify.nupkg"));
-    AppVeyor.AddInformationalMessage("Uploading artifacts");
-    AppVeyor.UploadArtifact(artifact, settings => settings
-        .SetArtifactType(AppVeyorUploadArtifactType.NuGetPackage)
-    );    
+    foreach(var artifact in System.IO.Directory.EnumerateFiles(artifacts.ToString() +"/packages", "*.nupkg")) {
+        AppVeyor.UploadArtifact(artifact, settings => settings
+            .SetArtifactType(AppVeyorUploadArtifactType.NuGetPackage)
+        );    
+    }
 });
 
 //////////////////////////////////////////////////////////////////////
