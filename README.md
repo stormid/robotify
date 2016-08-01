@@ -1,4 +1,5 @@
 # ![Robotify](https://raw.githubusercontent.com/stormid/robotify/master/docs/img/robot.png) Robotify
+
 Robotify - robots.txt handler for ASP.NET (Webforms and MVC)
 
 ## Installation
@@ -31,4 +32,21 @@ The default configuration will produce a ```robots.txt``` that denies all robots
 ```txt
 User-agent: *
 Disallow: /
+```
+
+If you are installing Robotify into a MVC application, remember to update your route config to ignore the robots.txt path:
+
+```c#
+  public static void RegisterRoutes(RouteCollection routes)
+  {
+      routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+      routes.IgnoreRoute("robots.txt");
+
+      routes.MapRoute(
+          name: "Default",
+          url: "{controller}/{action}/{id}",
+          defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+      );
+  }
 ```

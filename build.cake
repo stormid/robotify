@@ -147,7 +147,8 @@ Task("Upload-AppVeyor-Artifacts")
     .WithCriteria(() => AppVeyor.IsRunningOnAppVeyor)
     .Does(() =>
 {
-    var artifact = MakeAbsolute(File(artifacts.ToString() +"/packages/*.nupkg"));
+
+    var artifact = MakeAbsolute(File(artifacts.ToString() +"/packages/Robotify.nupkg"));
     AppVeyor.AddInformationalMessage("Uploading artifacts");
     AppVeyor.UploadArtifact(artifact, settings => settings
         .SetArtifactType(AppVeyorUploadArtifactType.NuGetPackage)
